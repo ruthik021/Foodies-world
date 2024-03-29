@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,600,0,0" />
+    <title>Login Page</title>
+</head>
+  <script language="javascript">
+function web(){
+  window.open("index.html");
+}
+ </script>
+<style>
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;600&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  background: linear-gradient(45deg, #131086, #b621f3);
+  padding: 40px;
+}
+
+.container {
+  min-height: calc(100vh - 80px);
+  display: grid;
+  grid-template-columns: 50% 50%;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.login-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 150px;
+  background-color: white;
+}
+
+.login-right {
+  background-color: #eeeeee;
+  display: flex;
+  justify-content: center;
+}
+.login-right img {
+  width: 100%;
+}
+
+.login-header {
+  margin-bottom: 50px;
+}
+.login-header h1 {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+.login-header p {
+  opacity: 0.7;
+  font-size:18px;
+}
+
+.login-form {
+  width: 450px;
+}
+.login-form-content {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+}
+.login-form-footer {
+  display: flex;
+  gap: 30px;
+  margin-top: 70px;
+}
+.login-form-footer a {
+  flex: 6;
+  gap: 15px;
+  border-radius: 100px;
+  padding: 0.6rem;
+  justify-content: center;
+  border: 1px solid black;
+  display: flex;
+  align-items: center;
+  color: black;
+  text-decoration: none;
+  font-size: 15px;
+}
+.login-form-footer a:hover {
+  background-color: #eeeeee;
+  font-size: 17px;
+  
+}
+
+.form-item label:not(.checkboxLabel) {
+  display: inline-block;
+  background-color: white;
+  margin-bottom: 10px;
+  position: absolute;
+  padding: 0 10px;
+  transform: translate(30px, -10px);
+  font-size: 14px;
+}
+
+input[type=text],
+input[type=password],
+input[type=email] {
+  border: 1px solid black;
+  outline: none;
+  height: 55px;
+  padding: 0 2rem;
+  border-radius: 100px;
+  width: 100%;
+  transition: background 0.5s;
+  font-size: 18px;
+}
+input[type=text]:focus,
+input[type=password]:focus,
+input[type=email]:focus {
+  border-color: #131086;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 18px;
+}
+
+input[type=checkbox] {
+  width: 20px;
+  height: 20px;
+  accent-color: #131086;
+}
+
+button {
+  border: none;
+  background: linear-gradient(45deg, #131086, #b621f3);
+  color: white;
+  padding: 1rem;
+  border-radius: 100px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 18px;
+  height: 55px;
+  cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 1350px) {
+  .login-left {
+    padding: 50px !important;
+  }
+  .login-form {
+    width: 100%;
+  }
+  .login-form-footer {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+@media (max-width: 768px) {
+  body {
+    padding: 20px;
+  }
+  .container {
+    grid-template-columns: auto;
+  }
+  .login-right {
+    display: none;
+  }
+}
+</style>
+<form method="post" action="home.html" onSubmit="return validateForm();">
+  <div class="container">
+        <div class="login-left">
+            <div class="login-header">
+                <h1 style="color:black;">Welcome to Foodies World</h1>
+                <p>Please login to use the platform</p>
+            </div>
+           <!-- <form class="login-form" autocomplete="off">  -->
+                <div class="login-form-content">
+                    <div class="form-item">
+
+                        <label for="userForm">Enter username</label>
+						<input required type="text" id="d1" name="d1" style="max-width: 450px;" class="form-control"/>
+                     <!--   <input type="text" id="userForm">   -->
+                    </div>
+                    <div class="form-item">
+                        <label for="passwordForm" >Enter Password</label>
+						<input required type="text" id="d2" name="d2" style="max-width: 450px;" class="form-control"/>
+               <!--         <input type="password" id="passwordForm" required> -->
+                    </div>
+                    <div class="form-item">
+                        <div class="checkbox">
+                            <input type="checkbox" id="rememberMeCheckbox" checked>
+							<!--   for="rememberMeCheckbox"-->
+                            <label class="checkboxLabel"  required>Remember me</label>
+                        </div>
+                    </div>
+	<!--    SignUp -->
+	<div >
+		<p style="font-size: 18px;
+  height: 55px;">
+		Don't have an account?<a href="signUp.html">sign Up</a>
+		</p>
+	</div>
+                 <button type="submit" style="max-width: 450px;"  onclick="web()" >Sign In</button> 
+			
+                </div>
+				<div class="login-form-footer">
+                     <a href="https://www.facebook.com/">
+                        <img width="30"
+                            src="images/facebook-logo.jpg">
+                        Facebook Login
+                    </a>
+                    <a href="https://www.google.com/">
+                        <img width="30"
+                            src="images/google-logo.jpg">
+                        Google Login
+                    </a>
+                </div>
+            
+        </div>
+        <div class="login-right">
+            <img src="images/image1.jpg"  alt="image not found"/>
+        </div>
+    </div>
+
+</form>
+<script type="text/javascript">
+function validateForm() {
+if (isEmpty(document.getElementById('d1').value.trim())) {
+alert('Username is required!');
+return false;
+}
+if (isEmpty(document.getElementById('d2').value.trim())) {
+alert('Password is required!');
+return false;
+}
+
+return true;
+}
+</script>
+</body>
+</html>
+
